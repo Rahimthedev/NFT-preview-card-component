@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    padding: 24px;
+    color: hsl(215, 51%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+}
+
+.card {
+    max-width: 350px;
+    background-color: hsl(216, 50%, 16%);
+    padding: 1.5rem 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem 1rem rgba(0, 0, 0, 0);
+}
+
+.card .pro-pic {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay img {
+    width: 48px;
+    height: 48px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    border-radius: 1rem;
+}
+
+.card-disc {
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.card-disc h1 {
+    font-size: 22px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: hsl(178, 100%, 50%);
+}
+
+.card-disc #text1 {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-weight: 300;
+}
+
+.flex-pr {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.pro-price, .pro-deadline {
+    display: flex;
+    gap: 5px;
+}
+
+.pro-price {
+    color: hsl(178, 100%, 50%);
+}
+
+hr {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    height: 1px;
+    border: none;
+    background-color: hsl(215, 32%, 27%);
+}
+
+.footer {
+    display: flex;
+    gap: 20px;
+}
+
+.footer img {
+    width: 32px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.footer p {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer p a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 640px) {
+    .card-disc #text1 {
+        font-size: 16px;
+        margin-top: 12px;
+        margin-bottom: 15px;
+    }
+
+    hr {
+        margin: 16px 0;
+    }
+}
